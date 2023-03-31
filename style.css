@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  padding: 0%;
+}
+
+section
+{
+  padding-top: 120px;
+  position: relative;
+}
+
+section::before
+{
+  z-index: -1;
+  content: "";
+  font-size: 72px;
+  color: gray;
+  opacity: 0.25;
+  position: absolute;
+  font-weight: 700;
+  top: 20px;
+  left: -30px;
+}
+
+nav {
+  column-gap: 50%;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+}
+nav .brand {
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 25px;
+}
+
+.menu{
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+  margin-top: auto;
+}
+
+.menu li {
+  margin: 0px 20px;
+  cursor: pointer;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+}
+
+#home {
+  padding-top: 128px;
+}
+
+.btn.button {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 8px 22px;
+}
+
+.btn.button:hover, .btn.button.active {
+  background-color: black;
+  color: white;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+#home .arrow img {
+  width: 60px;
+  height: auto;
+}
+
+.about::before
+{
+  content: 'About';
+}
+
+.work::before{
+  content: 'Work';
+}
+
+#arrow {
+  animation: 2s upDown infinite;
+}
+
+@keyframes upDown {
+  0%
+  {
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(10px);
+  }
+  100%
+  {
+    transform: translateY(0);
+  }
+}
+
+.about-exp-item
+{
+  margin-top: 24px;
+}
+.about-exp-item-detail {
+  display: none;
+}
+
+.about-exp-item-header
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+#work-1{
+  grid-area: work-1;
+}
+#work-2{
+  grid-area: work-2;
+}
+#work-3{
+  grid-area: work-3;
+}
+.work-img {
+  display: grid;
+  grid-template-areas: "work-1 work-2" "work-3 work-3";
+  gap: 16px;
+}
+.work-img img 
+{
+  width: 100%;
+}
+
+.work-img-item{
+  position: relative;
+}
+
+.work-img-item:hover::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+#work-1:hover::after {
+  content: "Web Project";
+}
+
+#work-2:hover::after {
+  content: "Web Project";
+}
+
+#work-3:hover::after {
+  content: "Web Project";
+}
+
+#contact img 
+{
+  width: 40px;
+  height: auto;
+}
+
+#contact p 
+{
+  margin-top: auto;
+}
+
+.contact::before
+{
+  content: 'Contact';
+}
+
+.contact-form{
+  border: 1px solid black;
+  padding: 64px 32px;
+}
+
+@media only screen and (max-width:768px)
+{
+  .home img {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width:576px)
+{
+  section::before{
+    left:-30px;
+    font-size: 62px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .navbar-item {
+    margin-bottom: 10px;
+  }
+}
